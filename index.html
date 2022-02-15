@@ -5,24 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-   <!--  <link rel="stylesheet" href="./reset.css"> -->
+    <!--  <link rel="stylesheet" href="./reset.css"> -->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <section class="section">
-      <h1 class="heading">register</h1>
-      <p>Create your account.It's free and only takes a minute </p>
-      <form action="">
-        <div>
-          <input type="text" placeholder="First name" autofocus required> 
-          <input type="text" placeholder="Last name" required>
-        </div>
-        <input type="email" name="" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <label > <input type="checkbox" name="" > <span>I accept</span></label>
-       <input type="submit" class="btn" value="Register now">
-      </form>
-    </section>
-    <p>Already have an account?<a href="#">Sign in</a></p>
+    <div class="wrap">
+      <section class="section">
+        <h1 class="heading">register</h1>
+        <p>Create your account.It's free and only takes a minute</p>
+        <form action="">
+          <div class="full-name">
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First name"
+              autofocus
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last name"
+              required
+            />
+          </div>
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <label>
+            <input type="checkbox" name="true" /> <span>I accept the <a href="">Term of Use</a>& <a href="">Privacy Policy</a></span></label
+          >
+          <input type="submit" class="btn" value="Register now" />
+        </form>
+      </section>
+      <p>Already have an account?<a href="#">Sign in</a></p>
+    </div>
   </body>
 </html>
