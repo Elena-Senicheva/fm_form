@@ -1,53 +1,89 @@
-body {
-  background-color: grey;
+:root {
+  --main-color: #6e87aa;
+  --text-color: #d4d4d4;
+  --link-color: green;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  min-height: 100vh;
+  padding-top: 50px;
+  background-color: var(--main-color);
+  text-align: center;
+  font-family: sans-serif;
 }
 .section {
+  max-width: 500px;
+  width: 100%;
+  min-width: 320px;
+  margin: auto;
+  padding: 20px 50px;
+  background-color: #fff;
+}
+.flex-column {
   display: flex;
   flex-direction: column;
-  max-width: 60vh;
-  min-height: 100vh;
-  margin: 20px auto;
-    background-color: rgb(241, 235, 235);
-  text-align: center;
 }
-.heading{
-  position: relative;
-  margin-bottom: 0;
-  font-size: 30px;
-  text-transform:capitalize;
-  font-family: sans-serif;
-  font-weight: 300;
+.form {
+  min-height: 60vh;
+  justify-content: space-evenly;
 }
-.heading::before{
-  display: block;                  
-  width:110px;                    
-  content: '';                    
-  position: absolute;             
-  border-bottom: 1px solid #000;   
-  top:50%;                         
-  right: 40px; 
-}
-.heading::after{
-  display: block;                  
-  width:110px;                    
-  content: '';                    
-  position: absolute;             
-  border-bottom: 1px solid #000;   
-  top:50%;                         
-  left: 40px; 
-}
-.full-name{
-  display:flex;
+.full-name {
+  display: flex;
   justify-content: space-between;
 }
-input {
+.full-name > * {
+  width: 48%;
+}
+.heading {
+  position: relative;
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+.heading::before,
+.heading::after {
+  content: '';
   display: block;
-  margin: 20px auto;
-  padding: 10px;
-  font-size: 20px;
-  }
-.btn{
-  background-color: rgb(8, 110, 50);
-  color: azure;
+  width: 30%;
+  height: 2px;
+  background-color: var(--text-color);
+  position: absolute;
+  top: 50%;
+}
+.heading::after {
+  right: 0;
+}
+input {
+  padding: 0.8em;
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  /* font-size: 1em; */
+}
+input::placeholder {
+  text-transform: capitalize;
+  font-size: 1em;
+}
+a:not(p > a) {
+  color: var(--link-color);
+  text-decoration: none;
+}
+.accept {
+  text-align: left;
+  color: var(--text-color);
+}
+.btn {
+  padding:0.8em;
   border: none;
+  background-color: var(--link-color);
+  color: azure;
+  text-transform:capitalize;
+}
+.text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

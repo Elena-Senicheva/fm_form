@@ -10,10 +10,10 @@
   </head>
   <body>
     <div class="wrap">
-      <section class="section">
-        <h1 class="heading">register</h1>
+      <section class="section flex-column">
+        <h1 class="heading ">register </h1>
         <p>Create your account.It's free and only takes a minute</p>
-        <form action="">
+        <form action="" class="form flex-column">
           <div class="full-name">
             <input
               type="text"
@@ -31,10 +31,10 @@
           </div>
           <input type="email" name="email" placeholder="Email" required />
           <input type="password" placeholder="Password" required />
-          <label>
-            <input type="checkbox" name="true" /> <span>I accept the <a href="">Term of Use</a>& <a href="">Privacy Policy</a></span></label
+          <label class="accept">
+            <input type="checkbox" name="true"  /> I accept the <a href="">Term of Use</a>& <a href="">Privacy Policy</a></label
           >
-          <input type="submit" class="btn" value="Register now" />
+          <input type="submit" class="btn text-overflow" value="Register now" />
         </form>
       </section>
       <p>Already have an account?<a href="#">Sign in</a></p>
